@@ -21,6 +21,11 @@ public class Publisher {
     @Access(value = AccessType.FIELD)
     private String address;
 
+    @Deprecated
+    Publisher() {
+        this("", "");
+    }
+
     public Publisher(String name, String address) {
         this.name = name;
         this.address = address;

@@ -8,23 +8,23 @@ import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.servlet.ModelAndView;
 
-import guru.springframework.spring5webapp.repository.BookRepository;
+import guru.springframework.spring5webapp.repository.AuthorRepository;
 
 @Controller
-@RequestMapping("/books")
-public class BookController implements Serializable {
+@RequestMapping("/authors")
+public class AuthorController implements Serializable {
     private static final long serialVersionUID = 1L;
 
-    private final BookRepository bookRepository;
+    private final AuthorRepository authorRepository;
 
     @Autowired
-    public BookController(BookRepository bookRepository) {
-        this.bookRepository = bookRepository;
+    public AuthorController(AuthorRepository authorRepository) {
+        this.authorRepository = authorRepository;
     }
 
     @GetMapping
-    public ModelAndView getBooks() {
-        return new ModelAndView("books")
-            .addObject("books", this.bookRepository.findAll());
+    public ModelAndView getAuthors() {
+        return new ModelAndView("authors")
+            .addObject("authors", this.authorRepository.findAll());
     }
 }

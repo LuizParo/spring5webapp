@@ -1,7 +1,8 @@
 package guru.springframework.spring5webapp.repository;
 
-import guru.springframework.spring5webapp.model.Book;
 import org.springframework.data.repository.Repository;
+
+import guru.springframework.spring5webapp.model.Book;
 
 public interface BookRepository extends Repository<Book, Long> {
 

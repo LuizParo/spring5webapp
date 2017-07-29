@@ -1,15 +1,16 @@
 package guru.springframework.spring5webapp.bootstrap;
 
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.context.ApplicationListener;
+import org.springframework.context.event.ContextRefreshedEvent;
+import org.springframework.stereotype.Component;
+
 import guru.springframework.spring5webapp.model.Author;
 import guru.springframework.spring5webapp.model.Book;
 import guru.springframework.spring5webapp.model.Publisher;
 import guru.springframework.spring5webapp.repository.AuthorRepository;
 import guru.springframework.spring5webapp.repository.BookRepository;
 import guru.springframework.spring5webapp.repository.PublisherRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.context.ApplicationListener;
-import org.springframework.context.event.ContextRefreshedEvent;
-import org.springframework.stereotype.Component;
 
 @Component
 public class DevBootstrap implements ApplicationListener<ContextRefreshedEvent> {
